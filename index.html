@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Separador de MAC e Serial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body>
+
+        <div class="container">
+
+            <div class="header-line">
+                <h2>🔧 Separador Inteligente MAC / SERIAL</h2>
+                <span class="badge" id="contador">0 itens</span>
+            </div>
+
+            <p class="subtitle">
+                O sistema identifica automaticamente MAC e SERIAL pelo formato.
+            </p>
+
+            <div class="card">
+                <label><b>Entrada de dados:</b></label>
+                <textarea id="entrada" placeholder="Aceita formatos:
+00ADD5BA3F48	QRV7S20918000182
+B0735D159965	QRV7S20525012689
+94E9EEB21373	QRV7S20924001285"></textarea>
+
+                <button onclick="processar()">⚙️ Processar</button>
+                <button onclick="limpar()">🧹 Limpar</button>
+
+                <div class="info">
+                    ✔ Detecta MAC automaticamente | ✔ Aceita : ou - | ✔ Serial detectado automaticamente
+                </div>
+            </div>
+
+            <div class="card">
+                <label><b>Resultado MAC:</b></label>
+                <textarea id="saida_mac"></textarea>
+
+                <button class="copy-btn" onclick="copiar('saida_mac')">📋 Copiar MAC</button>
+
+                <div class="info" id="total_mac">
+                    Total MAC: 0
+                </div>
+            </div>
+
+            <div class="card">
+                <label><b>Resultado SERIAL:</b></label>
+                <textarea id="saida_serial"></textarea>
+
+                <button class="copy-btn" onclick="copiar('saida_serial')">📋 Copiar SERIAL</button>
+
+                <div class="info" id="total_serial">
+                    Total SERIAL: 0
+                </div>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
